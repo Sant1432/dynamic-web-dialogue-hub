@@ -1,26 +1,102 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dynamic-web-dialogue-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="dynamic-web-dialogue-hub" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
-
-  <body>
-    <div id="root"></div>
+    <title>Системы активного отображения информации</title>
+    <link rel="stylesheet" href="/src/styles.css">
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">InfoSystems</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#chats">Чаты</a></li>
+          <li><a href="#blogs">Блоги</a></li>
+          <li><a href="#wiki">Wiki</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <button class="mobile-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <h2>Системы активного отображения информации</h2>
+          <p>Узнайте больше о современных способах обмена информацией</p>
+        </div>
+      </section>
+
+      <section id="chats" class="feature">
+        <div class="container">
+          <h2>Чаты</h2>
+          <div class="chat-demo">
+            <div class="chat-messages" id="chatMessages">
+              <!-- Messages will be added here by JavaScript -->
+            </div>
+            <div class="chat-input">
+              <input type="text" id="messageInput" placeholder="Введите сообщение...">
+              <button onclick="sendMessage()">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blogs" class="feature">
+        <div class="container">
+          <h2>Блоги</h2>
+          <div class="blog-posts">
+            <article class="blog-post">
+              <h3>Что такое блог?</h3>
+              <p>Блог - это веб-сайт, основное содержимое которого регулярно добавляемые записи...</p>
+            </article>
+            <!-- More blog posts -->
+          </div>
+        </div>
+      </section>
+
+      <section id="wiki" class="feature">
+        <div class="container">
+          <h2>Wiki-системы</h2>
+          <div class="wiki-content">
+            <h3>Особенности Wiki</h3>
+            <ul>
+              <li>Совместное редактирование</li>
+              <li>Версионность</li>
+              <li>Гипертекстовость</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Свяжитесь с нами</h2>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 InfoSystems. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="/src/main.js"></script>
   </body>
 </html>
