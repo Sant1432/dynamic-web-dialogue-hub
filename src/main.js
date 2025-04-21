@@ -13,14 +13,17 @@ const messages = [
 
 function displayMessages() {
   const chatMessages = document.getElementById('chatMessages');
-  chatMessages.innerHTML = messages
-    .map(msg => `
-      <div class="message ${msg.type}">
-        ${msg.text}
-      </div>
-    `)
-    .join('');
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  // Only run if we're on the chat page
+  if (chatMessages) {
+    chatMessages.innerHTML = messages
+      .map(msg => `
+        <div class="message ${msg.type}">
+          ${msg.text}
+        </div>
+      `)
+      .join('');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
 }
 
 function sendMessage() {
@@ -72,4 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Initialize any page-specific elements
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleSubmit);
+  }
 });
