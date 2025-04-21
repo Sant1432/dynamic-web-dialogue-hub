@@ -36,17 +36,36 @@
               <div class="chat-rooms">
                 <h3>Комнаты</h3>
                 <ul>
-                  <li class="active">Общий чат</li>
-                  <li>Техподдержка</li>
-                  <li>Новости</li>
+                  <li class="active">
+                    <span class="room-icon">🌐</span>
+                    Общий чат
+                    <span class="unread-badge">3</span>
+                  </li>
+                  <li>
+                    <span class="room-icon">🛠️</span>
+                    Техподдержка
+                  </li>
+                  <li>
+                    <span class="room-icon">📰</span>
+                    Новости
+                  </li>
                 </ul>
               </div>
               <div class="online-users">
                 <h3>Онлайн</h3>
                 <ul>
-                  <li>Пользователь 1</li>
-                  <li>Пользователь 2</li>
-                  <li>Пользователь 3</li>
+                  <li>
+                    <span class="user-status online"></span>
+                    Пользователь 1
+                  </li>
+                  <li>
+                    <span class="user-status online"></span>
+                    Пользователь 2
+                  </li>
+                  <li>
+                    <span class="user-status away"></span>
+                    Пользователь 3
+                  </li>
                 </ul>
               </div>
             </div>
@@ -56,7 +75,10 @@
               </div>
               <div class="chat-input">
                 <input type="text" id="messageInput" placeholder="Введите сообщение...">
-                <button onclick="sendMessage()" class="btn btn-primary">Отправить</button>
+                <button onclick="sendMessage()" class="btn btn-primary">
+                  <span class="send-icon">➤</span>
+                  Отправить
+                </button>
               </div>
             </div>
           </div>

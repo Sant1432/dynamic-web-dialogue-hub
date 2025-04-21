@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +5,15 @@
 }
 
 :root {
-  --primary-color: #1EAEDB;
-  --secondary-color: #33C3F0;
-  --accent-color: #9b87f5;
-  --background-color: #fff;
-  --text-color: #333;
-  --border-color: #ddd;
-  --border-radius: 8px;
+  --primary-color: #9b87f5;
+  --secondary-color: #403E43;
+  --accent-color: #8465fb;
+  --background-color: #1A1F2C;
+  --card-background: #221F26;
+  --text-color: #FFFFFF;
+  --text-muted: #9F9EA1;
+  --border-color: #403E43;
+  --border-radius: 12px;
   --transition: all 0.3s ease;
 }
 
@@ -31,9 +32,9 @@ body {
 
 /* Navigation */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(26, 31, 44, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,15 +49,9 @@ body {
 }
 
 .logo {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-size: 1.5rem;
   font-weight: 700;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
 }
 
 .nav-links a {
@@ -69,8 +64,8 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--primary-color);
-  background: rgba(30, 174, 219, 0.1);
+  color: var(--accent-color);
+  background: rgba(155, 135, 245, 0.1);
 }
 
 /* Buttons */
@@ -86,66 +81,43 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary-color);
-  color: white;
+  background: var(--accent-color);
+  color: var(--text-color);
 }
 
 .btn-primary:hover {
-  background: var(--secondary-color);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(155, 135, 245, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-color);
-  color: white;
+  background: var(--accent-color);
+  color: var(--text-color);
   transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1EAEDB, #33C3F0);
-  color: white;
+  background: linear-gradient(135deg, #403E43 0%, #1A1F2C 100%);
+  color: var(--text-color);
   padding: 8rem 0 4rem;
   text-align: center;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
 }
 
 /* Features Section */
 .features {
   padding: 4rem 0;
-  background: #f9f9f9;
-}
-
-.features h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  background: var(--background-color);
 }
 
 .feature-card {
-  background: white;
+  background: var(--card-background);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -154,22 +126,7 @@ body {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.feature-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.feature-card h3 {
-  padding: 1.5rem;
-  margin: 0;
-}
-
-.feature-card p {
-  padding: 0 1.5rem 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 /* Chat Section */
@@ -178,118 +135,34 @@ body {
 }
 
 .chat-container {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2rem;
-  background: white;
+  background: var(--card-background);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  margin-top: 2rem;
 }
 
 .chat-sidebar {
-  background: #f5f5f5;
+  background: var(--secondary-color);
   padding: 1.5rem;
-}
-
-.chat-rooms h3,
-.online-users h3 {
-  margin-bottom: 1rem;
-}
-
-.chat-rooms ul,
-.online-users ul {
-  list-style: none;
-}
-
-.chat-rooms li,
-.online-users li {
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
 }
 
 .chat-rooms li:hover,
 .chat-rooms li.active {
-  background: var(--primary-color);
-  color: white;
-}
-
-.chat-main {
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-}
-
-.chat-messages {
-  flex-grow: 1;
-  padding: 1.5rem;
-  overflow-y: auto;
-}
-
-.message {
-  margin-bottom: 1rem;
-  padding: 0.8rem 1.2rem;
-  border-radius: 20px;
-  max-width: 80%;
-}
-
-.message.received {
-  background: #f1f1f1;
-  margin-right: auto;
-}
-
-.message.sent {
-  background: var(--primary-color);
-  color: white;
-  margin-left: auto;
-}
-
-.chat-input {
-  display: flex;
-  padding: 1rem;
-  gap: 1rem;
-  border-top: 1px solid var(--border-color);
+  background: var(--accent-color);
+  color: var(--text-color);
 }
 
 .chat-input input {
-  flex: 1;
-  padding: 0.8rem;
+  background: var(--background-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
 }
 
 /* Blog Section */
-.blogs-section {
-  padding: 6rem 0 4rem;
-}
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 .blog-card {
-  background: white;
+  background: var(--card-background);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: var(--transition);
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
 }
 
 .blog-content {
@@ -297,118 +170,36 @@ body {
 }
 
 .blog-meta {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
+  color: var(--text-muted);
 }
 
 /* Wiki Section */
-.wiki-section {
-  padding: 6rem 0 4rem;
-}
-
-.wiki-layout {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 .wiki-sidebar {
-  background: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
+  background: var(--secondary-color);
 }
 
 .wiki-search input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  margin-bottom: 1.5rem;
-}
-
-.wiki-navigation ul {
-  list-style: none;
-}
-
-.wiki-navigation a {
-  display: block;
-  padding: 0.5rem;
+  background: var(--background-color);
   color: var(--text-color);
-  text-decoration: none;
-  transition: var(--transition);
-  border-radius: var(--border-radius);
-}
-
-.wiki-navigation a:hover {
-  background: rgba(30, 174, 219, 0.1);
-  color: var(--primary-color);
+  border: 1px solid var(--border-color);
 }
 
 .wiki-content {
-  background: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.wiki-content h2 {
-  margin-bottom: 2rem;
-}
-
-.wiki-content section {
-  margin-bottom: 2rem;
-}
-
-.wiki-content ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-.wiki-examples {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.example-card {
-  background: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
+  background: var(--card-background);
 }
 
 /* Contact Form */
-.contact {
-  padding: 4rem 0;
-  background: #f9f9f9;
-}
-
-#contactForm {
-  max-width: 600px;
-  margin: 2rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 #contactForm input,
 #contactForm textarea {
-  padding: 0.8rem;
+  background: var(--card-background);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-}
-
-#contactForm textarea {
-  height: 150px;
-  resize: vertical;
 }
 
 /* Footer */
 footer {
-  background: #333;
-  color: white;
+  background: var(--secondary-color);
+  color: var(--text-muted);
   padding: 2rem 0;
   text-align: center;
 }
