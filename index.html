@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Системы активного отображения информации</title>
     <link rel="stylesheet" href="/src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </head>
@@ -14,10 +15,10 @@
       <div class="container">
         <h1 class="logo">InfoSystems</h1>
         <ul class="nav-links">
-          <li><a href="#home">Главная</a></li>
-          <li><a href="#chats">Чаты</a></li>
-          <li><a href="#blogs">Блоги</a></li>
-          <li><a href="#wiki">Wiki</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="chats.html">Чаты</a></li>
+          <li><a href="blogs.html">Блоги</a></li>
+          <li><a href="wiki.html">Wiki</a></li>
           <li><a href="#contact">Контакты</a></li>
         </ul>
         <button class="mobile-menu" onclick="toggleMenu()">
@@ -33,47 +34,32 @@
         <div class="container">
           <h2>Системы активного отображения информации</h2>
           <p>Узнайте больше о современных способах обмена информацией</p>
-        </div>
-      </section>
-
-      <section id="chats" class="feature">
-        <div class="container">
-          <h2>Чаты</h2>
-          <div class="chat-demo">
-            <div class="chat-messages" id="chatMessages">
-              <!-- Messages will be added here by JavaScript -->
-            </div>
-            <div class="chat-input">
-              <input type="text" id="messageInput" placeholder="Введите сообщение...">
-              <button onclick="sendMessage()">Отправить</button>
-            </div>
+          <div class="hero-buttons">
+            <a href="chats.html" class="btn btn-primary">Начать чат</a>
+            <a href="blogs.html" class="btn btn-secondary">Читать блоги</a>
           </div>
         </div>
       </section>
 
-      <section id="blogs" class="feature">
+      <section class="features">
         <div class="container">
-          <h2>Блоги</h2>
-          <div class="blog-posts">
-            <article class="blog-post">
-              <h3>Что такое блог?</h3>
-              <p>Блог - это веб-сайт, основное содержимое которого регулярно добавляемые записи...</p>
-            </article>
-            <!-- More blog posts -->
-          </div>
-        </div>
-      </section>
-
-      <section id="wiki" class="feature">
-        <div class="container">
-          <h2>Wiki-системы</h2>
-          <div class="wiki-content">
-            <h3>Особенности Wiki</h3>
-            <ul>
-              <li>Совместное редактирование</li>
-              <li>Версионность</li>
-              <li>Гипертекстовость</li>
-            </ul>
+          <h2>Наши возможности</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Чаты">
+              <h3>Чаты</h3>
+              <p>Общайтесь в реальном времени</p>
+            </div>
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" alt="Блоги">
+              <h3>Блоги</h3>
+              <p>Делитесь своими мыслями</p>
+            </div>
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Wiki">
+              <h3>Wiki</h3>
+              <p>Создавайте базу знаний</p>
+            </div>
           </div>
         </div>
       </section>
@@ -85,7 +71,7 @@
             <input type="text" placeholder="Ваше имя" required>
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
+            <button type="submit" class="btn btn-primary">Отправить</button>
           </form>
         </div>
       </section>

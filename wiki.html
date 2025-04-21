@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki - InfoSystems</title>
+    <link rel="stylesheet" href="/src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">InfoSystems</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="chats.html">Чаты</a></li>
+          <li><a href="blogs.html">Блоги</a></li>
+          <li><a href="wiki.html" class="active">Wiki</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
+        </ul>
+        <button class="mobile-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="wiki-section">
+        <div class="container">
+          <div class="wiki-layout">
+            <aside class="wiki-sidebar">
+              <div class="wiki-search">
+                <input type="text" placeholder="Поиск...">
+              </div>
+              <nav class="wiki-navigation">
+                <h3>Содержание</h3>
+                <ul>
+                  <li><a href="#introduction">Введение</a></li>
+                  <li><a href="#features">Возможности</a></li>
+                  <li><a href="#usage">Использование</a></li>
+                  <li><a href="#examples">Примеры</a></li>
+                </ul>
+              </nav>
+            </aside>
+            <article class="wiki-content">
+              <h2>Wiki-система</h2>
+              <section id="introduction">
+                <h3>Введение</h3>
+                <p>Wiki-система - это веб-приложение, позволяющее пользователям редактировать содержимое страниц...</p>
+              </section>
+              <section id="features">
+                <h3>Возможности</h3>
+                <ul>
+                  <li>Совместное редактирование</li>
+                  <li>История изменений</li>
+                  <li>Категоризация страниц</li>
+                  <li>Поиск по содержимому</li>
+                </ul>
+              </section>
+              <section id="usage">
+                <h3>Использование</h3>
+                <p>Для начала работы с Wiki-системой необходимо...</p>
+              </section>
+              <section id="examples">
+                <h3>Примеры</h3>
+                <div class="wiki-examples">
+                  <div class="example-card">
+                    <h4>Пример 1</h4>
+                    <p>Демонстрация создания новой страницы...</p>
+                  </div>
+                  <div class="example-card">
+                    <h4>Пример 2</h4>
+                    <p>Работа с категориями...</p>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 InfoSystems. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>

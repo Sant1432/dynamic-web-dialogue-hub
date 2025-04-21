@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блоги - InfoSystems</title>
+    <link rel="stylesheet" href="/src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">InfoSystems</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="chats.html">Чаты</a></li>
+          <li><a href="blogs.html" class="active">Блоги</a></li>
+          <li><a href="wiki.html">Wiki</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
+        </ul>
+        <button class="mobile-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="blogs-section">
+        <div class="container">
+          <h2>Популярные блоги</h2>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Технологии">
+              <div class="blog-content">
+                <h3>Новые технологии в 2024</h3>
+                <p class="blog-meta">Автор: Иван Петров | 15 апреля 2024</p>
+                <p>Обзор самых интересных технологических новинок этого года...</p>
+                <a href="#" class="btn btn-secondary">Читать далее</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" alt="Коммуникации">
+              <div class="blog-content">
+                <h3>Эффективные коммуникации</h3>
+                <p class="blog-meta">Автор: Мария Сидорова | 14 апреля 2024</p>
+                <p>Как наладить эффективное общение в команде...</p>
+                <a href="#" class="btn btn-secondary">Читать далее</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Информация">
+              <div class="blog-content">
+                <h3>Управление информацией</h3>
+                <p class="blog-meta">Автор: Алексей Иванов | 13 апреля 2024</p>
+                <p>Современные подходы к управлению информацией...</p>
+                <a href="#" class="btn btn-secondary">Читать далее</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 InfoSystems. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
